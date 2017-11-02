@@ -2,6 +2,7 @@ turns = 0
 correct = 0
 wrong = 0
 score = 0
+start = Time.now
 
 while turns < 10
 
@@ -23,6 +24,11 @@ while turns < 10
   end
 
 end
+
+duration = Time.now - start
+
+puts "Total time #{duration} seconds"
+puts "#{duration/turns} seconds per problem"
 
 score = correct.to_f/turns.to_f
 score = score * 100
