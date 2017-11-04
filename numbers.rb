@@ -34,3 +34,7 @@ score = correct.to_f/turns.to_f
 score = score * 100
 
 puts "Rights #{correct}; Wrongs #{wrong}; Score #{score}%"
+
+puts "What is your name? "
+
+name = gets.to_s
