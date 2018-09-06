@@ -4,26 +4,28 @@
 class Baby
   attr_reader :name
 
-  def initialize(name)
+  def initialize(name = nil)
+    cry
     @name = name
   end
 
   def cry
     puts "Waaaaaa!!!!"
   end
+
 end
 
+# Make them cry once they are born.
+# Give them a name (through reader/writer).
+# Allow them to cry through a method cry.
+# Allow name's to be optionally set when they are born.
 
 north_west = Baby.new
-# once babies are born we want them to cry
-#=> "Waaaaaa!!!!"
 north_west.name = "North West"
-
-blue_ivy = Baby.new
-blue_ivy.name = "Blue Ivy"
-
 north_west.name
+
+blue_ivy = Baby.new("Blue_Ivy")
 blue_ivy.name
 
-north_west.cry #=> "Waaaaaa!!!!"
-blue_ivy.cry #=> "Waaaaaa!!!!"
+north_west.cry
+blue_ivy.cry
